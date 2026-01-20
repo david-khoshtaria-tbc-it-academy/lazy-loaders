@@ -1,0 +1,18 @@
+<div class="chart-wrapper">
+  <div class="chart-container">
+    @for (bar of chartBars(); track bar.label) {
+      <div class="bar-group">
+        <div class="bar-wrapper">
+          <div 
+            class="bar" 
+            [style.height.%]="bar.height"
+            [attr.data-value]="bar.value"
+          >
+            <span class="tooltip">Day {{bar.label}}<br>Spent: ${{bar.value}}</span>
+          </div>
+        </div>
+        <span class="label">{{bar.label}}</span>
+      </div>
+    }
+  </div>
+</div>

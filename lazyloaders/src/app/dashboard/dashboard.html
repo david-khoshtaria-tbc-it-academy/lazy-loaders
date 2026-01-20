@@ -1,0 +1,4 @@
+<div class="header">
+  <span>მოგესალმები, {{ auth.currentUser()?.username || auth.currentUser()?.sub }}!</span>
+  <button (click)="auth.logout()">გამოსვლა</button>
+</div>

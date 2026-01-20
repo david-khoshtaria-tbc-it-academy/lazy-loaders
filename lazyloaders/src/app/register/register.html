@@ -1,0 +1,42 @@
+<div class="auth-wrapper">
+  <div class="auth-card">
+    <h2>Create Account</h2>
+    <p class="subtitle">Join our analytics platform</p>
+
+    <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+      <div class="row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input formControlName="firstName" placeholder="John">
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input formControlName="lastName" placeholder="Doe">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Email Address</label>
+        <input formControlName="email" type="email" placeholder="john@example.com">
+      </div>
+
+      <div class="form-group">
+        <label>Username</label>
+        <input formControlName="username" placeholder="johndoe123">
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input formControlName="password" type="password" placeholder="••••••••">
+      </div>
+
+      <button type="submit" [disabled]="registerForm.invalid" class="btn-primary">
+        Sign Up
+      </button>
+    </form>
+
+    <div class="auth-footer">
+      Already have an account? <a routerLink="/login">Log in</a>
+    </div>
+  </div>
+</div>
